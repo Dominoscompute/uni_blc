@@ -40,13 +40,13 @@ function! DeBruijnBlc() abort
 
   let win = nvim_open_win(buf, 1, opts)
 
-  function Ln(m)
+  function! s:ln(m)
     return s:vwch . ' ' . (repeat(' ', (s:width - strchars(a:m) - 4)/2)) . a:m . (repeat(' ', strchars(a:m)%2 + (s:width - strchars(a:m) - 4)/2)) . ' ' . s:vwch
   endfunction
 
   " let offset = 0
   for ln in split_line
-    let lines += [Ln(ln)]
+    let lines += [s:ln(ln)]
     " let start_col = (s:width - len(ln))/2
     " let end_col = start_col + len(ln)
     " let current_row = height/2-len(split_line)/2 + offset
