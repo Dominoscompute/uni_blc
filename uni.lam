@@ -24,3 +24,4 @@ in uni
 -- (cat delimit.blc; echo -n 1111000111001) | ./blc run uni.lam
 -- which should output
 -- <11010,>
+-- "UaAVgB4X54XPA8Lbnw+F6dLoGwvh8Ob3z3YZGho="
