@@ -1,4 +1,7 @@
+" Opens a floating window with the de bruijn index formated version of the
+" bitwise binary lambda calculus on the curent line
 function! DeBruijnBlc() abort
+  " most of this code came from https://www.statox.fr/posts/2021/03/breaking_habits_floating_window/
   let s:width = 50
   let line = getline('.')
   let line = substitute(line, '\v00|01|1+0', '\r&\r', 'g')
@@ -7,7 +10,6 @@ function! DeBruijnBlc() abort
   let line = substitute(line, '\v\r(1+0)\r', '\="\r" . (strchars(submatch(1))-1) . "\r"', 'g')
   let line = substitute(line, '\v\r| |\t|\n', '', 'g')
   let height = (strchars(line)/(s:width - 4)) + ((strchars(line)%(s:width - 4)) == 0 ? 0 : 1 ) + 4
-  " let height = 10
 
   let buf = nvim_create_buf(v:false, v:true)
 
