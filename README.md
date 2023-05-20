@@ -4,7 +4,7 @@ My work surrounding the binary lambda calculus (blc) universal machine (uni).
 
 ## executables
 
-blc is the 64 bit version of [this c code](https://www.ioccc.org/2012/tromp/hint.html)
+blc is the 64 bit version of [this c code](https://www.ioccc.org/2012/tromp/hint.html)  
 \+blc\+ is from [here.](https://github.com/tromp/AIT)
 
 ## symbolic \`\\\\2\\1
